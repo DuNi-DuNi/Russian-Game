@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>러시안 룰렛</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+    #result {
+      font-size: 2rem;
+      margin: 20px;
+      padding: 20px 40px;
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+    button {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      border-radius: 50%;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div id="result">생존</div>
+  <button onclick="pullTrigger()">Pull</button>
+
+  <script>
+    function pullTrigger() {
+      // 1~6 중 랜덤 (1이면 사망, 나머지는 생존)
+      let chamber = Math.floor(Math.random() * 6) + 1;
+      let resultBox = document.getElementById("result");
+
+      if (chamber === 1) {
+        resultBox.textContent = "사망";
+        resultBox.style.color = "red";
+      } else {
+        resultBox.textContent = "생존";
+        resultBox.style.color = "green";
+      }
+    }
+  </script>
+</body>
+</html>
