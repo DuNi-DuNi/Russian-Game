@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>러시안 룰렛</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+    #result {
+      font-size: 2rem;
+      margin: 20px;
+      padding: 20px 40px;
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+    button {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      border-radius: 50%;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div id="result">생존</div>
+  <button onclick="pullTrigger()">Pull</button>
+  <script src="JS_file.js"></script>
+</body>
+</html>
